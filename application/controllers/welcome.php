@@ -6,6 +6,7 @@ class Welcome extends CI_Controller {
    {
       session_start();
       parent::__construct();
+      $this->load->helper('url');
       if ( !isset($_SESSION['username']) ) {
          redirect('admin');
       }
